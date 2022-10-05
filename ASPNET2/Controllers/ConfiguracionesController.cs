@@ -14,7 +14,9 @@ namespace ASPNET2.Controllers
         }
         public IActionResult Index()
         {
-            ViewBag.mensaje = 
+            ViewBag.mensaje = configuracion["Mensaje"];
+            ViewBag.log = configuracion["MisConfiguraciones:Debug:LogHabilitado"];
+            ViewBag.traza = configuracion["MisConfiguraciones:Traza"];
             return View();
         }
     }
