@@ -7,3 +7,24 @@
 <a asp-controller="route" asp-action="obt">Ir al método acción Obtener</a>
 <br/>
 <a asp-controller="Home" asp-action="Index">Inicio</a>
+
+<h3>Sobre envío de parámetros</h3>
+
+<a asp-controller="route" asp-action="getValor" asp-route-nombre="Pepe">
+    Enviando un parametro
+</a>
+<br/>
+<a asp-controller="route" asp-action="getValores" 
+  asp-route-empleado="Sofia" asp-route-telefono="123456">
+    Enviando varios parámetros
+</a>
+
+<h3>Sobre envío de parámetros con query string</h3>
+<a asp-controller="route" asp-action="ejemplo1query" asp-route-id="FIS100">Enviar un parámetro</a>
+<br />
+<a asp-controller="route" asp-action="ejemplo1query2" 
+  asp-route-id="FIS100" asp-route-apellido="Castaños">Enviar dos parámetros</a>
+
+<br />
+<a asp-controller="route" asp-action="ejemplo1query3"
+   asp-route-id="FIS110" asp-route-apellido="Roca">Enviar dos parámetros (con HttpContext)</a>
