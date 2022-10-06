@@ -1,0 +1,56 @@
+﻿@model ASPNET2.ViewModels.CuentaViewModel
+
+<center><h1>Registro de usuario</h1></center>
+
+<form asp-controller="Cuenta" asp-action="Registrar" method="POST">
+    <table border="1">
+        <tr>
+            <td>Usuario</td>
+            <td><input asp-for="cuenta.usuario"/></td>
+        </tr>
+        <tr>
+            <td>Contraseña</td>
+            <td><input type="password" asp-for="cuenta.password" /></td>
+        </tr>
+        <tr>
+            <td>Descripción</td>
+            <td><input asp-for="cuenta.descripcion" /></td>
+        </tr>
+        <tr>
+            <td>Está activo</td>
+            <td><input type="checkbox" asp-for="cuenta.activo" /></td>
+        </tr>
+        <tr>
+            <td>Género</td>
+            <td>
+                Masculino <input type="radio" value="M" asp-for="cuenta.genero" />
+                <br/>
+                Femenino <input type="radio" value="F" asp-for="cuenta.genero" />
+            </td>
+        </tr>
+        <tr>
+            <td>Lenguajes de programación</td>
+            <td>
+                @for(var i = 0; i < Model.lenguajes.Count; i++)
+                {
+                    <input type="hidden" asp-for="@Model.lenguajes[i].id"/>
+                    <input type="hidden" asp-for="@Model.lenguajes[i].nombre" />
+                    <input type="checkbox" asp-for="@Model.lenguajes[i].marcado"/>
+                    <label asp-for="@Model.lenguajes[i].id">@Model.lenguajes[i].nombre</label>
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>Cargos</td>
+            <td>
+                <select asp-for="cuenta.cargo" asp-items="@Model.cargos"></select>
+
+            </td>
+        </tr>
+        <tr>
+            <td><input type="hidden" asp-for="cuenta.id"/></td>
+            <td><input type="submit" value="Enviar"/></td>
+        </tr>
+    </table>
+
+</form>
