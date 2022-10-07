@@ -1,0 +1,44 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<table border="1">
+    <tr>
+        <td>ID</td>
+        <td>@ViewBag.cuenta.id</td>
+    </tr>
+    <tr>
+        <td>Nombre</td>
+        <td>@ViewBag.cuenta.usuario</td>
+    </tr>
+    <tr>
+        <td>Contraseña</td>
+        <td>@ViewBag.cuenta.password</td>
+    </tr>
+    <tr>
+        <td>Descripción</td>
+        <td>@ViewBag.cuenta.descripcion</td>
+    </tr>
+    <tr>
+        <td>Activo</td>
+        <td>@ViewBag.cuenta.activo</td>
+    </tr>
+    <tr>
+        <td>Cargo</td>
+        <td>@ViewBag.cuenta.cargo</td>
+    </tr>
+    <tr>
+        <td>Genero</td>
+        <td>@ViewBag.cuenta.genero</td>
+    </tr>
+    <tr>
+        <td>Lenguajes de programación</td>
+        <td>
+            @foreach (var lenguaje in ViewBag.cuenta.leguajes_prog)
+            {
+            <span>@lenguaje</span><br/>
+            
+        }</td>
+    </tr>
+</table>
