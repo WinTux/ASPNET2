@@ -1,0 +1,37 @@
+﻿@model ASPNET2.Models.Empleado
+
+<h1>Registro de empleado</h1>
+<form asp-controller="Empelado" asp-action="Registrar" method="POST">
+    <table>
+        <tr>
+            <td>Nombre</td>
+            <td><input asp-for="nombre" /></td>
+            <td><span asp-validation-for="nombre"></span></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="password" asp-for="password" /></td>
+            <td><span asp-validation-for="password"></span></td>
+        </tr>
+        <tr>
+            <td>Edad</td>
+            <td><input asp-for="edad" /></td>
+            <td><span asp-validation-for="edad"></span></td>
+
+        </tr>
+        <tr>
+            <td>email</td>
+            <td><input  asp-for="email" /></td>
+            <td><span asp-validation-for="email"></span></td>
+        </tr>
+        <tr>
+            <td>Página</td>
+            <td><input asp-for="pagina" /></td>
+            <td><span asp-validation-for="pagina"></span></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="REGISTRAR"/></td>
+        </tr>
+    </table>
+</form>
