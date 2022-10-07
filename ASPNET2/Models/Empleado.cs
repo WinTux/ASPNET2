@@ -10,7 +10,7 @@ namespace ASPNET2.Models
         public string nombre { get; set; }
 
         [Required]
-        [MinLength(3)]
+        [MinLength(3,ErrorMessage ="La longitud mínima es 3")]
         [MaxLength(30)]
         [RegularExpression("\\d{3,4}[a-zA-Z]{3}")]
         public string password { get; set; }
