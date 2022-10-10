@@ -1,0 +1,16 @@
+﻿<html>
+    <head>
+        <title>@ViewBag.titulo</title>
+        @RenderSection("head", required: false)
+    </head>
+    <body>
+        <a asp-controller="AcercaDe" asp-action="Index">Acerce de nosotros</a>
+         | <a asp-controller="Contactos" asp-action="Index">Contactanos</a>
+    |
+    <a asp-controller="Noticias" asp-action="Index">Noticias</a>
+         <br/>
+         @RenderBody()
+         <br/>
+         Copyright Pepe(r) 2022
+    </body>
+</html>

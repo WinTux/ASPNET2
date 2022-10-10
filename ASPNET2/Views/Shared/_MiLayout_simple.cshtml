@@ -1,0 +1,16 @@
+﻿<html>
+    <head>
+        <title>@ViewBag.titulo</title>
+        @RenderSection("head", required: false)
+    </head>
+    <body>
+        <a asp-controller="Empleado" asp-action="Index">Al formulario de empleados</a>
+         | <a asp-controller="Home" asp-action="Index">Home</a>
+    |
+    <a asp-controller="Layout" asp-action="PruebaSeccion">Uso de secciones</a>
+         <br/>
+         @RenderBody()
+         <br/>
+         Copyright Pepe(r) 2022
+    </body>
+</html>
